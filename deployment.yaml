@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: products-api
+  annotations:
+      sidecar.istio.io/inject: "true"
+  labels:
+    app: products-api
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: products-api
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: products-api
+        version: v1
+    spec:
+      containers:
+      - name: products-api
+        image: gcr.io/damadei-at-goog/products-api:v3.0
+        ports:
+        - containerPort: 8080
