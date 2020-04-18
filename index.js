@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
 
-const VERSION = '3.1';
+const VERSION = '1.0';
 
 app.disable('etag');
 
-app.listen(8181, () => {
+app.listen(8080, () => {
     console.log("Server running on port 8080");
 });
 
