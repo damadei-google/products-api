@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: products-api
-        image: gcr.io/damadei-at-goog/products-api:v3.0
+        image: gcr.io/PROJECT_ID/products-api:v3.0
         ports:
         - containerPort: 8080
